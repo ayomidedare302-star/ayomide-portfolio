@@ -325,3 +325,114 @@ ul { list-style: none; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* CONTACT FORM */
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 35px auto 0;
+  text-align: left;
+  padding: 28px;
+  background: rgba(16, 31, 50, 0.85);
+  border: 1px solid rgba(232, 180, 76, 0.22);
+  border-radius: 12px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold-light);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #091423;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.form-group input {
+  min-height: 48px;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #8291a4;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(232, 180, 76, 0.1);
+}
+
+.contact-form button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.contact-form button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-status {
+  display: none;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-status.success,
+.contact-status.error {
+  display: block;
+}
+
+.contact-status.success {
+  color: #a4e4a7;
+  background: rgba(95, 223, 161, 0.09);
+  border: 1px solid rgba(95, 223, 161, 0.3);
+}
+
+.contact-status.error {
+  color: #ffb4b4;
+  background: rgba(255, 90, 90, 0.08);
+  border: 1px solid rgba(255, 90, 90, 0.3);
+}
+
+/* CONTACT FORM ON SMALL SCREENS */
+
+@media (max-width: 430px) {
+  .contact-form {
+    padding: 20px 16px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+  }
+}

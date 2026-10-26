@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Onajobi Ayomide's frontend developer portfolio, featuring responsive web projects and creative digital experiences.">
   <meta name="theme-color" content="#07111f">
-  <title>Onajobi Ayomide| Frontend Developer</title>
+  <title>Onajobi Ayomide | Frontend Developer</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -72,7 +72,7 @@
             <a href="https://github.com/ayomidedare302-star"
                target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
             <span class="social-line"></span>
-            <a href="#contact">LET'S CONNECT</a>
+            <a href="#contact">LET'S CONNECT ↗</a>
           </div>
         </div>
 
@@ -228,6 +228,7 @@
             <span class="skill-caption">User experience</span>
           </article>
         </div>
+
         <p class="skills-note">Skill indicators are illustrative, not formal test scores.</p>
       </div>
     </section>
@@ -307,21 +308,64 @@
     <!-- CONTACT -->
     <section class="section contact-section" id="contact">
       <div class="contact-glow"></div>
+
       <div class="container contact-inner reveal">
         <p class="eyebrow">LET'S CONNECT</p>
-        <h2>Good ideas start<br><span class="gold-gradient">with a conversation.</span></h2>
+
+        <h2>Good ideas start<br>
+          <span class="gold-gradient">with a conversation.</span>
+        </h2>
+
         <p>
           I'm growing my skills and looking to connect with people who
           care about technology, thoughtful design, and building useful things.
         </p>
-        <a class="button button-gold"
-           href="https://github.com/ayomidedare302-star"
-           target="_blank" rel="noopener noreferrer">Find Me on GitHub ↗</a>
-        <span class="contact-footnote">A professional email or LinkedIn link can be added here later.</span>
+
+        <form id="contact-form" class="contact-form"
+              action="https://formspree.io/f/meaaazya"
+              method="POST">
+
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name"
+                   placeholder="Enter your name" autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" name="email"
+                   placeholder="you@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="subject"
+                   placeholder="What would you like to discuss?" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Your Message</label>
+            <textarea id="contact-message" name="message" rows="6"
+                      placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" id="contact-submit"
+                  class="button button-gold">
+            Send Message
+          </button>
+
+          <p id="contact-status" class="contact-status"
+             role="status" aria-live="polite"></p>
+        </form>
+
+        <span class="contact-footnote">
+          I look forward to hearing from you.
+        </span>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <a class="logo" href="#home">AYO<span>.</span></a>
